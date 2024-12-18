@@ -3,6 +3,9 @@
  * @param {number} contactId 
  * @returns 
  */
+
+// This Video is about the installiation of the jQuery library to use the ajax method
+
 async function getContact(contactId) {
   const resp = await $.ajax({
     url: `/contacts/${contactId}`,
