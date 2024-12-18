@@ -1,8 +1,8 @@
 {
     "compilerOptions": {
         "outDir": "build",
-        "target": "esnext",
-        "noEmit": true
+        "target": "esnext", //This is update TS to latest version.
+        "noEmit": true //This will prevent another JS file creation
     },
     "include": ["src/**/*"]
 }
