@@ -1,11 +1,14 @@
 interface Contact {
     id: number;
-    name: string;
+    name: ContactName;
     birthDate?: Date;
 }
 
 let primaryContact: Contact = {
-    birthDate: new Date("01-01-1980"),
+    birthDate: new Date("05/05/2001"),
     id: 12345,
-    name: "Jamie Johnson",
+    name: "Shubham Musmade",
 }
+
+// This is the exalple for type alias
+type ContactName = string
