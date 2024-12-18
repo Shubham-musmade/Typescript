@@ -1,3 +1,9 @@
+// This is a comment but here we are difining a function data type
+/**
+ * 
+ * @param {number} contactId 
+ * @returns 
+ */
 async function getContact(contactId) {
   const resp = await $.ajax({
     url: `/contacts/${contactId}`,
@@ -12,10 +18,16 @@ async function getContact(contactId) {
 }
 
 getContact(1).then((contact) => {
-  contact.id = "1234"
-  contact.birthDate = "12/12/1990";
+  contact.id = 1234
+  contact.birthDate = new Date("12/12/1990");
 });
 
-getContact("2").then((contact) => {
+// This method is going to return a error because the id is a number and we are trying to change it to a string
+// getContact("2").then((contact) => {
+//   console.log("Contact: ", JSON.stringify(contact));
+// });
+
+// This is not going to return a error because we are changing the id to a number
+getContact(2).then((contact) => {
   console.log("Contact: ", JSON.stringify(contact));
 });
