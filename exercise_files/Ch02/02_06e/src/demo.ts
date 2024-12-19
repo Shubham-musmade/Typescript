@@ -3,12 +3,10 @@ interface Contact {
     name: string;
 }
 
-interface UserContact<TExternalId> {
+interface UserContact {
     id: number
     name: string
     username: string
-    externalId: TExternalId
-    loadExternalId(): Task<TExternalId>
 }
 
 function clone<T1, T2 extends T1>(source: T1): T2 {
